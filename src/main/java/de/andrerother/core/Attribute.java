@@ -11,7 +11,7 @@ import java.util.List;
 @ToString
 public class Attribute {
     private int value;
-    private String name;
+    private String name; //todo enum...
     private Status status;
     private List<Boolean> boons;
     private List<Boolean> demons;

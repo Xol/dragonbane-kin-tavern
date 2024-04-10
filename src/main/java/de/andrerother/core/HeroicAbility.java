@@ -9,6 +9,6 @@ import lombok.ToString;
 @ToString
 public class HeroicAbility extends Skills {
     // todo Requirements to use this Skill like "Strength 12". Maybe just a text info or Attribute?
-    private int requirement;
-    private int costs;
+    private Attribute attributeRequirement;
+    private int willpowerCosts;
 }

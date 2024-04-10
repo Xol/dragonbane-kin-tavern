@@ -4,7 +4,6 @@ import de.andrerother.core.*;
 import de.andrerother.core.kin.Human;
 import de.andrerother.core.kin.Kin;
 import jakarta.enterprise.context.ApplicationScoped;
-import org.w3c.dom.Attr;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,8 +52,11 @@ public class CharakterService {
         List<HeroicAbility> heroicAbilities = new ArrayList<>();
         HeroicAbility heroicAbility = new HeroicAbility();
         heroicAbility.setName("My HeroicAbility");
-        heroicAbility.setCosts(5);
-        heroicAbility.setRequirement(12);
+        heroicAbility.setWillpowerCosts(5);
+        Attribute attribute = new Attribute();
+        attribute.setName("Strength");
+        attribute.setValue(12);
+        heroicAbility.setAttributeRequirement(attribute);
         heroicAbilities.add(heroicAbility);
         return heroicAbilities;
     }

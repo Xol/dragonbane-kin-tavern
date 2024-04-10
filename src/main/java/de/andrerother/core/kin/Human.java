@@ -11,10 +11,6 @@ import java.util.List;
 @Setter
 @Getter
 @ToString
-public class Human implements Kin {
+public class Human extends Kin {
     private final List<InnateAbility> innateAbilities = new ArrayList<>(2);
-    private int hitPoints;
-    private int willpower;
-    private int encumbrance;
-    private int movement;
 }
