@@ -1,5 +1,8 @@
 package de.andrerother.core;
 
+import lombok.Getter;
+
+@Getter
 public enum Status {
     EXHAUSTED("Exhausted"),
     SICKLY("Sickly"),
