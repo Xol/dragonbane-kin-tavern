@@ -1,0 +1,15 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the Dragonbane Kin Tavern image
+        run: docker build -f src/main/docker/Dockerfile.native-micro -t xol/dragonbane-kin-tavern:latest .
