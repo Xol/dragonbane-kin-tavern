@@ -1,9 +1,6 @@
 package de.andrerother.api;
 
-import de.andrerother.core.kin.Human;
-import de.andrerother.core.kin.Kin;
-import de.andrerother.core.PlayerCharacter;
-import de.andrerother.service.CharakterService;
+import de.andrerother.service.CharacterService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -14,7 +11,7 @@ import jakarta.ws.rs.core.MediaType;
 public class GreetingResource {
 
     @Inject
-    private CharakterService charakterService;
+    private CharacterService characterService;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
@@ -26,6 +23,6 @@ public class GreetingResource {
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/pc")
     public String helloChar() {
-        return charakterService.createDummyCharakter().toString();
+        return characterService.createDummyCharacter().toString();
     }
 }

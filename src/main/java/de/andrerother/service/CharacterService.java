@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @ApplicationScoped
-public class CharakterService {
-    public PlayerCharacter createDummyCharakter() {
+public class CharacterService {
+    public PlayerCharacter createDummyCharacter() {
         PlayerCharacter pc = new PlayerCharacter();
         pc.setPlayerName("John Doe");
         pc.setProfession(createDummyProfession());
