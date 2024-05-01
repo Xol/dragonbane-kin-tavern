@@ -11,5 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Create container-image extension
+        run: ./mvnw package -Dnative -Dquarkus.native.container-build=true -Dquarkus.container-image.build=true
       - name: Build the Dragonbane Kin Tavern image
         run: docker build -f src/main/docker/Dockerfile.native-micro -t xol/dragonbane-kin-tavern:latest .
